@@ -19,3 +19,4 @@ if __name__ == '__main__':
             op_check = 1
     if op_check == 0:
         print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
