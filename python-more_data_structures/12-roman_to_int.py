@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if type(roman_string) != str and roman_string is not None:
+        return 0
     roman = {
             "I": 1,
             "V": 5,
