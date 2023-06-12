@@ -20,8 +20,7 @@ def roman_to_int(roman_string):
             return 0
         value = roman[roman_string[i]]
         if i < len(roman_string) - 1 and value < roman[roman_string[i + 1]]:
-            result = roman[roman_string[i + 1]] - value
-            i += 1
+            result -= value
         else:
             result += value
         i += 1
