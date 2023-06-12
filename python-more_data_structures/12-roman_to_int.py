@@ -14,6 +14,8 @@ def roman_to_int(roman_string):
     result = 0
     i = 0
     while i < len(roman_string):
+        if roman.get(roman_string[i], 0) == 0:
+            return 0
         value = roman[roman_string[i]]
         if i < len(roman_string) - 1 and value < roman[roman_string[i + 1]]:
             result = roman[roman_string[i + 1]] - value
