@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) != str and roman_string is not None:
+    if (not isinstance(roman_string, str)) or roman_string is None:
         return 0
+
     roman = {
             "I": 1,
             "V": 5,
@@ -11,6 +12,7 @@ def roman_to_int(roman_string):
             "D": 500,
             "M": 1000
             }
+
     result = 0
     i = 0
     while i < len(roman_string):
