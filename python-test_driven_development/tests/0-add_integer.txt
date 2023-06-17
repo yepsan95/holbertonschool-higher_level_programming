@@ -1,5 +1,5 @@
-"""DocTest for function 'add_integer()' from module 0-add_integer
 """
+DocTest for function 'add_integer()' from module 0-add_integer
 
 
 Passing 1 integer to the function.
@@ -17,6 +17,19 @@ Passing 2 floats to the function.
 
 >>> add_integer(1.5, 3.14)
 4
+
+Passing 1 negative integer to the function.
+
+>>> add_integer(-98)
+0
+
+Passing 2 negative integers to the function.
+>>> add_integer(-1, -2)
+-3
+
+Passing 2 negative floats to the function.
+>>> add_integer(-1.5, -2.5)
+-3
 
 Passing 'None' to the function.
 
@@ -46,3 +59,5 @@ Passing 0 arguments to the function.
 >>> add_integer()
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+"""
