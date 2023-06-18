@@ -12,7 +12,8 @@ def add_integer(a, b=98):
     Adds 2 integers and returns the result.
     The arguments can be either integers or floats.
     It takes at least 1 argument and 2 at the most.
-    If only one argument is provided, the second argument is set to 98 by default.
+    If only one argument is provided,
+    the second argument is set to 98 by default.
 
     Args:
         a (int or float): The first number.
