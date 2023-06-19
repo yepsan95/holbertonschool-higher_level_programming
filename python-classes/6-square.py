@@ -45,8 +45,7 @@ class Square:
                 or type(value[1]) is not int \
                 or value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+        self.__position = value
 
     def area(self):
         """Class 'area' method. Returns the area of the square.
