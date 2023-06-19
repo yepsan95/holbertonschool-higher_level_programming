@@ -4,54 +4,72 @@ DocTest for function 'add_integer()' from module '0-add_integer'.
 
 Passing 1 integer to the function.
 
->>> add_integer = __import__('0-add_integer').add_integer
->>> add_integer(1)
-99
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(1)
+	99
 
 Passing 2 integers to the function.
 
->>> add_integer(1, 2)
-3
+	>>> add_integer(1, 2)
+	3
 
 Passing 2 floats to the function.
 
->>> add_integer(1.5, 3.14)
-4
+	>>> add_integer(1.5, 3.14)
+	4
 
 Passing 1 negative integer to the function.
 
->>> add_integer(-98)
-0
+	>>> add_integer(-98)
+	0
 
 Passing 2 negative integers to the function.
->>> add_integer(-1, -2)
--3
+	>>> add_integer(-1, -2)
+	-3
 
 Passing 2 negative floats to the function.
->>> add_integer(-1.5, -2.5)
--3
+	>>> add_integer(-1.5, -2.5)
+	-3
 
 Passing 'None' to the function.
 
->>> add_integer(None)
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
 Passing two strings to the function.
->>> add_integer("Hello", "holbie")
-Traceback (most recent call last):
-TypeError: a must be an integer
+	>>> add_integer("Hello", "holbie")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
 
 Passing an integer and a string to the function.
 
->>> add_integer(1, "string")
-Traceback (most recent call last):
-TypeError: b must be an integer
+	>>> add_integer(1, "string")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
 
 Passing 0 arguments to the function.
 
->>> add_integer()
-Traceback (most recent call last):
-TypeError: add_integer() missing 1 required positional argument: 'a'
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Passing 'inf' variable to the function:
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+Passing boolean variable to the function:
+
+	>>> add_integer(True)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+Passing syntax error to the function:
+
+	>>> add_integer(,)
+	Traceback (most recent call last):
+	SyntaxError: invalid syntax
 
 """
