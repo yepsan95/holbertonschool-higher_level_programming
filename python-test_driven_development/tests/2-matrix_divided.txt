@@ -1,0 +1,41 @@
+"""
+DocTest for function 'matrix_divided()' from module '2-matrix_divided'.
+
+
+Passing 0 arguments to the function.
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Passing an empty list and an integer to the function.
+
+	>>> matrix_divided([], 1)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Passing a string to the function.
+
+	>>> matrix_divided("Hello", 1)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Passing 'None' to the function.
+
+	>>> matrix_divided(None, 1)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Passing an empty list of lists to the function.
+
+	>>> matrix_divided([[]], 1)
+	[[]]
+
+Passing simple list to the function (not a matrix).
+
+	>>> matrix_divided([1, 2, 3], 1)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+"""
