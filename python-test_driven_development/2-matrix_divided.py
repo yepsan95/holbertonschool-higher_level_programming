@@ -29,7 +29,7 @@ def matrix_divided(matrix, div):
         list_len = len(matrix[i])
         new_matrix.append([])
         for j in range(len(matrix[i])):
-            if type(matrix[i][j]) is not int and matrix[i][j] is not float:
+            if type(matrix[i][j]) is not int and type(matrix[i][j]) is not float:
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             new_matrix[i].append(round(matrix[i][j] / div, 2))
 
