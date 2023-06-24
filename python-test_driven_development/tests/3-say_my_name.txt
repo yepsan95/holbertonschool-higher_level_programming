@@ -1,0 +1,58 @@
+"""
+DocTest for function 'say_my_name()' from module '3-say_my_name'.
+
+
+Passing 0 arguments to the function.
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Passing 1 argument to the function.
+
+	>>> say_my_name("Bryan")
+	My name is Bryan
+
+Passing 2 arguments to the function.
+
+	>>> say_my_name("Bryan", "Yep")
+	My name is Bryan Yep
+
+Passing more than 2 arguments to the function.
+
+	>>> say_my_name("Bryan", "Yep", "Valencia")
+	Traceback (most recent call last):
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+Passing 'None' to the function.
+
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+Passing non-strings to the function (numbers).
+
+	>>> say_my_name(5)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name("Bryan", 3.33)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name(6, 9)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+Passing non-strings to the function (collections).
+
+	>>> say_my_name(["Bryan", "Yep"], ["Valencia"])
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name({"Bryan": "Yep"}, {"Ki": "San"})
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+"""
