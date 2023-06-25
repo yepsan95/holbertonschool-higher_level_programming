@@ -12,6 +12,8 @@ def write_file(filename="", text=""):
     Args:
         filename (str): Name of the file to be overwritten.
         text (str): Text to be written to the file.
+    Returns:
+        Number of characters overwritten.
     """
 
     with open(filename, "w", encoding="utf-8") as file:
