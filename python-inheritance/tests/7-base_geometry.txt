@@ -1,0 +1,74 @@
+DocTest for module '7-base_geometry'.
+
+Creating an instance of class BaseGeometry().
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> base_geometry = BaseGeometry()
+	>>> type(base_geometry)
+	<class '7-base_geometry.BaseGeometry'>
+
+Passing 1 argument to an intantiation of BaseGeometry().
+
+	>>> del base_geometry
+	>>> base_geometry = BaseGeometry(None)
+	Traceback (most recent call last):
+	TypeError: BaseGeometry() takes no arguments
+
+Calling the class method 'area()'.
+
+	>>> base_geometry = BaseGeometry()
+	>>> base_geometry.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+Validating a string with class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year", "1995")
+	Traceback (most recent call last):
+	TypeError: Year must be an integer
+
+Validating an integer with clas method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year", 1995)
+
+Validating a float with class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year", 19.95)
+	Traceback (most recent call last):
+	TypeError: Year must be an integer
+
+Validating a negative integer with class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year", -1995)
+	Traceback (most recent call last):
+	ValueError: Year must be greater than 0
+
+Validating an integer of value 0 with class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year", 0)
+	Traceback (most recent call last):
+	ValueError: Year must be greater than 0
+
+Passing 1 argument to class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year")
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Passing 0 arguments to class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Passing more than 2 arguments to class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year", 1995, "Name")
+	Traceback (most recent call last):
+	TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Passing 1 argument to class method 'area()'.
+
+	>>> base_geometry.area(100)
+	Traceback (most recent call last):
+	TypeError: area() takes 1 positional argument but 2 were given
