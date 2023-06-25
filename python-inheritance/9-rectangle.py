@@ -36,4 +36,7 @@ class Rectangle(BaseGeometry):
         Returns a human-readable string representation of the object.
         """
 
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        string = "[{}]".format(self.__class__.__name__)
+        string += " {}/{}".format(self.__width, self.__height)
+
+        return string
