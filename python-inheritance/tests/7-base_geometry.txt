@@ -100,9 +100,20 @@ Passing 0 arguments to class method 'integer_validator()'.
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+Passing 'None' to class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator(None)
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Passing a list as first parameter of class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator(["Year"], (1, 9, 9, 5))
+	Traceback (most recent call last):
+	TypeError: ['Year'] must be an integer
+
 Passing more than 2 arguments to class method 'integer_validator()'.
 
 	>>> base_geometry.integer_validator("Year", 1995, "Name")
 	Traceback (most recent call last):
 	TypeError: integer_validator() takes 3 positional arguments but 4 were given
-
