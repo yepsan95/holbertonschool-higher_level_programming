@@ -14,6 +14,13 @@ Passing 1 argument to an intantiation of BaseGeometry().
 	Traceback (most recent call last):
 	TypeError: BaseGeometry() takes no arguments
 
+Using print() with an instance of BaseGeometry.
+
+	>>> bg = BaseGeometry()
+	>>> print(bg.area) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+	<bound method BaseGeometry.area of <7-base_geometry.BaseGeometry 
+	object at...>>
+
 Calling the class method 'area()'.
 
 	>>> base_geometry = BaseGeometry()
@@ -26,6 +33,12 @@ Passing 1 argument to class method 'area()'.
 	>>> base_geometry.area(100)
 	Traceback (most recent call last):
 	TypeError: area() takes 1 positional argument but 2 were given
+
+Using function print() with instance method integer_validator().
+
+	>>> print(bg.integer_validator) # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE
+	<bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
+	object at...>>
 
 Validating a string to class method 'integer_validator()'.
 
