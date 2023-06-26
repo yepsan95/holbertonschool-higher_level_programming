@@ -7,6 +7,9 @@ This module defines the class 'Base'.
 class Base:
     """
     The base class for all other classes in the project.
+
+    Attributes:
+        __nb_objects (int): The number of instances of 'Base'.
     """
 
     __nb_objects = 0
