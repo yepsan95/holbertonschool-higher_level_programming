@@ -7,6 +7,11 @@ Creating an instance of class BaseGeometry().
 	>>> type(base_geometry)
 	<class '7-base_geometry.BaseGeometry'>
 
+Printing an instance of BaseGeometry.
+
+	>>> print(base_geometry) # doctest: +ELLIPSIS
+	<7-base_geometry.BaseGeometry object at ...>
+
 Passing 1 argument to an intantiation of BaseGeometry().
 
 	>>> del base_geometry
@@ -40,6 +45,10 @@ Using function print() with instance method integer_validator().
 	<bound method BaseGeometry.integer_validator of <7-base_geometry.BaseGeometry 
 	object at...>>
 
+Validating an integer to class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year", 1995)
+
 Validating a string to class method 'integer_validator()'.
 
 	>>> base_geometry.integer_validator("Year", "1995")
@@ -60,7 +69,13 @@ Validating a list to class method 'integer_validator()'.
 
 Validating a set to class method 'integer_validator()'.
 
-	>>> base_geometry.integer_validator("Year", {1995})
+	>>> base_geometry.integer_validator("Year", {1995, 2000})
+	Traceback (most recent call last):
+	TypeError: Year must be an integer
+
+Validating a boolean to class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator("Year", True)
 	Traceback (most recent call last):
 	TypeError: Year must be an integer
 
@@ -88,6 +103,12 @@ Validating an integer of value 0 with class method 'integer_validator()'.
 	Traceback (most recent call last):
 	ValueError: Year must be greater than 0
 
+Passing a list as first parameter of class method 'integer_validator()'.
+
+	>>> base_geometry.integer_validator(["Year"], (1, 9, 9, 5))
+	Traceback (most recent call last):
+	TypeError: ['Year'] must be an integer
+
 Passing 1 argument to class method 'integer_validator()'.
 
 	>>> base_geometry.integer_validator("Year")
@@ -105,12 +126,6 @@ Passing 'None' to class method 'integer_validator()'.
 	>>> base_geometry.integer_validator(None)
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
-
-Passing a list as first parameter of class method 'integer_validator()'.
-
-	>>> base_geometry.integer_validator(["Year"], (1, 9, 9, 5))
-	Traceback (most recent call last):
-	TypeError: ['Year'] must be an integer
 
 Passing more than 2 arguments to class method 'integer_validator()'.
 
