@@ -7,6 +7,11 @@ Creating a 'MyList' instance and passing it to type().
 	>>> type(my_list)
 	<class '1-my_list.MyList'>
 
+Checking if my_list is a subclass of list.
+
+	>>> isinstance(my_list, list)
+	True
+
 Printing the list.
 
 	>>> print(my_list)
@@ -62,15 +67,21 @@ Passing a 'None' as an argument to the class instance.
 	Traceback (most recent call last):
 	TypeError: 'NoneType' object is not iterable
 
-Passing a 'None' as an argument to the class instance.
+Passing a list as an argument to the class instance.
 
 	>>> my_list = MyList([1, 2], [3, 4])
 	Traceback (most recent call last):
 	TypeError: list expected at most 1 argument, got 2
 
-Creating an unordered list of negative numbers.
+Passing the class method 'print_sorted()' to type().
 
 	>>> my_list = MyList()
+	>>> type(my_list.print_sorted())
+	[]
+	<class 'NoneType'>
+
+Creating an unordered list of negative numbers.
+
 	>>> my_list.append(-2)
 	>>> my_list.append(-4)
 	>>> my_list.append(-5)
@@ -81,7 +92,6 @@ Creating an unordered list of negative numbers.
 
 Appending repeated elements to the list and calling the class method 'print_sorted()'.
  
-
 	>>> my_list.append(-2)
 	>>> my_list.append(-2)
 	>>> my_list.append(-4)
