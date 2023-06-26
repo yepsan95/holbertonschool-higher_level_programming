@@ -35,6 +35,19 @@ Deleting the list, creating a new empty list and calling the class method
 	>>> my_list.print_sorted()
 	[]
 
+Passing the class method 'print_sorted()' to print().
+
+	>>> print(my_list.print_sorted)
+	<bound method MyList.print_sorted of []>
+
+Passing 1 argument to class method 'print_sorted()'.
+
+	>>> del my_list
+	>>> my_list = MyList()
+	>>> my_list.print_sorted(1)
+	Traceback (most recent call last):
+	TypeError: print_sorted() takes 1 positional argument but 2 were given
+
 Passing a list as an argument to the class instance and printing it.
 
 	>>> del my_list
