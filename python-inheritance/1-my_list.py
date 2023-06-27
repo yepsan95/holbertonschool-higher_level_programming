@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """
 This module defines a class 'MyList' that inherits from 'list'.
 
@@ -16,4 +14,6 @@ class MyList(list):
         """
         Prints the list, but sorted (ascending order).
         """
-        print(sorted(self))
+
+        if issubclass(MyList, list):
+            print(sorted(self))
