@@ -2,6 +2,7 @@
 """
 This module defines a class 'Rectangle'.
 """
+Base = __import__('base').Base
 
 
 class Rectangle(Base):
