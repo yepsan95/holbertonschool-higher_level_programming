@@ -160,7 +160,7 @@ class Rectangle(Base):
             print()
         for i in range(self.__height):
             for m in range(self.__x):
-                print(" ")
+                print(" ", end="")
             for j in range(self.__width):
                 print("#", end="")
             print()
