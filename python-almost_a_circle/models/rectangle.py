@@ -19,6 +19,11 @@ class Rectangle(Base):
             x (int): Position of the new rectangle on the X axis.
             y (int): Position of the new rectangle on the Y axis.
             id (int): Id number of the object.
+        Raises:
+            TypeError: If width or height is not an int.
+            ValueError: If width or height are <= 0.
+            TypeError: If x or y is not an int.
+            ValueError: If x or y are < 0.
         """
 
         self.width = width
@@ -39,15 +44,15 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width):
+    def width(self, value):
         """
         Setter for width property.
 
         Args:
-            width (int): Width of the new rectangle.
+            value (int): Width of the new rectangle.
         """
 
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
@@ -61,15 +66,15 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, height):
+    def height(self, value):
         """
         Setter for height property.
 
         Args:
-            height (int): Height of the new rectangle.
+            value (int): Height of the new rectangle.
         """
 
-        self.__height = height
+        self.__height = value
 
     @property
     def x(self):
@@ -83,15 +88,15 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self, x):
+    def x(self, value):
         """
         Setter for x property.
 
         Args:
-            x (int): Position of the new rectangle on the X axis.
+            value (int): Position of the new rectangle on the X axis.
         """
 
-        self.__x = x
+        self.__x = value
 
     @property
     def y(self):
@@ -105,12 +110,12 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(self, y):
+    def y(self, value):
         """
         Setter for y property.
 
         Args:
-            y (int): Position of the new rectangle on the Y axis.
+            value (int): Position of the new rectangle on the Y axis.
         """
 
-        self.__y = y
+        self.__y = value
