@@ -14,7 +14,7 @@ class Rectangle:
         Initializes a new rectangle.
 
         Args:
-            widht (int): Width of the new rectangle.
+            width (int): Width of the new rectangle.
             height (int): Height of the new rectangle.
         """
 
