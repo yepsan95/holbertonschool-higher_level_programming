@@ -38,7 +38,7 @@ class Rectangle:
         Property setter for private instance attribute 'width'.
 
         Args:
-            value (int): width of the new rectangle.
+            value (int): Width of the new rectangle.
         """
 
         if type(width) is not int:
@@ -65,7 +65,7 @@ class Rectangle:
         Property setter for private instance attribute 'height'.
 
         Args:
-            value (int): height of the new rectangle.
+            value (int): Height of the new rectangle.
         """
 
         if type(height) is not int:
