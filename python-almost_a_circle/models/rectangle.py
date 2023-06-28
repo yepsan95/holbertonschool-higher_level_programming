@@ -165,6 +165,38 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
+    def update(self, *args):
+        """
+        Assigns an argument to each attribute.
+
+        Args:
+            *args (ints): A list of the arguments passed to the function
+        """
+
+        if args is None:
+            return
+
+        try:
+            self.id = args[0]
+        except IndexError:
+            return
+        try:
+            self.width = args[1]
+        except IndexError:
+            return
+        try:
+            self.height = args[2]
+        except IndexError:
+            return
+        try:
+            self.x = args[3]
+        except IndexError:
+            return
+        try:
+            self.y = args[4]
+        except IndexError:
+            return
+
     def __str__(self):
         """
         Returns a human-readable string representation of an object.
