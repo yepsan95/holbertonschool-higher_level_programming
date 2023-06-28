@@ -21,11 +21,11 @@ class Rectangle(Base):
             id (int): Id number of the object.
         """
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-        super().__init__ = id
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
