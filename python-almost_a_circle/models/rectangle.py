@@ -177,7 +177,7 @@ class Rectangle(Base):
 
         if args and len(args) != 0:
             if args[0] is None:
-                return
+                self.__init__(self.width, self.height, self.x, self.y)
             try:
                 self.id = args[0]
             except IndexError:
@@ -200,7 +200,7 @@ class Rectangle(Base):
                 return
         elif kwargs and len(kwargs) != 0:
             if kwargs['id'] is None:
-                return
+                self.__init__(self.width, self.height, self.x, self.y)
             try:
                 self.id = kwargs['id']
             except KeyError:
