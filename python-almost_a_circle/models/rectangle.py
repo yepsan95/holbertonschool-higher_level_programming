@@ -212,11 +212,11 @@ class Rectangle(Base):
             try:
                 self.height = kwargs['height']
             except KeyError:
-                pass 
+                pass
             try:
                 self.x = kwargs['x']
             except KeyError:
-                pass 
+                pass
             try:
                 self.y = kwargs['y']
             except KeyError:
