@@ -202,19 +202,19 @@ class Rectangle(Base):
             except KeyError:
                 return
             try:
-                self.width= kwargs['width']
+                self.width = kwargs['width']
             except KeyError:
                 return
             try:
-                self.height= kwargs['height']
+                self.height = kwargs['height']
             except KeyError:
                 return
             try:
-                self.x= kwargs['x']
+                self.x = kwargs['x']
             except KeyError:
                 return
             try:
-                self.y= kwargs['y']
+                self.y = kwargs['y']
             except KeyError:
                 return
 
