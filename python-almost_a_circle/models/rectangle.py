@@ -171,8 +171,8 @@ class Rectangle(Base):
 
         Args:
             *args (ints): A list of the arguments passed to the function
-            **kwargs (ints): A dictionary of the arguments passed
-            to the function.
+            **kwargs (dict): A dictionary of the arguments passed
+            to the function as key/values.
         """
 
         if args and len(args) != 0:
@@ -200,23 +200,23 @@ class Rectangle(Base):
             try:
                 self.id = kwargs['id']
             except KeyError:
-                return
+                pass
             try:
                 self.width = kwargs['width']
             except KeyError:
-                return
+                pass
             try:
                 self.height = kwargs['height']
             except KeyError:
-                return
+                pass 
             try:
                 self.x = kwargs['x']
             except KeyError:
-                return
+                pass 
             try:
                 self.y = kwargs['y']
             except KeyError:
-                return
+                pass
 
     def __str__(self):
         """
