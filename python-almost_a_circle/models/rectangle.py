@@ -176,6 +176,8 @@ class Rectangle(Base):
         """
 
         if args and len(args) != 0:
+            if args[0] is None:
+                pass
             try:
                 self.id = args[0]
             except IndexError:
@@ -197,6 +199,8 @@ class Rectangle(Base):
             except IndexError:
                 return
         elif kwargs and len(kwargs) != 0:
+            if kwargs['id'] is None:
+                pass
             try:
                 self.id = kwargs['id']
             except KeyError:
