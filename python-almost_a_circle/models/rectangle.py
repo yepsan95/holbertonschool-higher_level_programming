@@ -165,37 +165,58 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Assigns an argument to each attribute.
 
         Args:
             *args (ints): A list of the arguments passed to the function
+            **kwargs (ints): A dictionary of the arguments passed
+            to the function.
         """
 
-        if args is None:
-            return
-
-        try:
-            self.id = args[0]
-        except IndexError:
-            return
-        try:
-            self.width = args[1]
-        except IndexError:
-            return
-        try:
-            self.height = args[2]
-        except IndexError:
-            return
-        try:
-            self.x = args[3]
-        except IndexError:
-            return
-        try:
-            self.y = args[4]
-        except IndexError:
-            return
+        if args and len(args) != 0:
+            try:
+                self.id = args[0]
+            except IndexError:
+                return
+            try:
+                self.width = args[1]
+            except IndexError:
+                return
+            try:
+                self.height = args[2]
+            except IndexError:
+                return
+            try:
+                self.x = args[3]
+            except IndexError:
+                return
+            try:
+                self.y = args[4]
+            except IndexError:
+                return
+        elif kwargs and len(kwargs) != 0:
+            try:
+                self.id = kwargs['id']
+            except KeyError:
+                return
+            try:
+                self.width= kwargs['width']
+            except KeyError:
+                return
+            try:
+                self.height= kwargs['height']
+            except KeyError:
+                return
+            try:
+                self.x= kwargs['x']
+            except KeyError:
+                return
+            try:
+                self.y= kwargs['y']
+            except KeyError:
+                return
 
     def __str__(self):
         """
