@@ -33,6 +33,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
+
         self.width = value
         self.height = value
 
@@ -44,4 +45,7 @@ class Square(Rectangle):
             Human-readable string representation of a square.
         """
 
-        return f"[{self.__class__.__name__}] ({id}) {x}/{y} - {width}"
+        str = f"[{self.__class__.__name__}] "
+        str += f"({self.id}) {self.x}/{self.y} - {self.width}"
+
+        return str
