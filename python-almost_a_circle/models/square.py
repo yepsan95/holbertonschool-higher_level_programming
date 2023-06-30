@@ -56,11 +56,11 @@ class Square(Rectangle):
             except IndexError:
                 return
             try:
-                self.x = args[3]
+                self.__x = args[3]
             except IndexError:
                 return
             try:
-                self.y = args[4]
+                self.__y = args[4]
             except IndexError:
                 return
 
@@ -74,11 +74,11 @@ class Square(Rectangle):
             except KeyError:
                 pass
             try:
-                self.x = kwargs['x']
+                self.__x = kwargs['x']
             except KeyError:
                 pass
             try:
-                self.y = kwargs['y']
+                self.__y = kwargs['y']
             except KeyError:
                 pass
 
