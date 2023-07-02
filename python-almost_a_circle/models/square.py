@@ -88,6 +88,21 @@ class Square(Rectangle):
             except KeyError:
                 pass
 
+    def to_dictionary(self):
+        """
+        Returns a dictionary representation of a Square.
+
+        Returns:
+            Dictionary representation of a Square.
+        """
+
+        return {
+                "id": self.id,
+                "size": self.size,
+                "x": self.x,
+                "y": self.y,
+                }
+
     def __str__(self):
         """
         Returns a human-readable string representation of a square.
