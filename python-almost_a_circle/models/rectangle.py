@@ -149,12 +149,16 @@ class Rectangle(Base):
             Area of the Rectangle instance.
         """
 
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """
         Prints the Rectangle instance in stdout with the character '#'.:w
         """
+
+        if self.width == 0 or self.height == 0:
+            print()
+            return
 
         for n in range(self.__y):
             print()
@@ -221,6 +225,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         """
         Returns the dictionary representation of a Rectangle.
+
+        Returns:
+            Dictionary representation of a Rectangle.
         """
 
         return {
