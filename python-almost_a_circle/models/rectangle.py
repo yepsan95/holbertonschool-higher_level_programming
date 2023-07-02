@@ -218,6 +218,18 @@ class Rectangle(Base):
             except KeyError:
                 pass
 
+    def to_dictionary(self):
+        """
+        Returns the dictionary representation of a Rectangle.
+        """
+
+        return {
+                "id": self.id,
+                "width": self.width,
+                "x": self.x,
+                "y": self.y
+                }
+
     def __str__(self):
         """
         Returns a human-readable string representation of an object.
