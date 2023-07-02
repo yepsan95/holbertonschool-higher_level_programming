@@ -233,6 +233,7 @@ class Rectangle(Base):
         return {
                 "id": self.id,
                 "width": self.width,
+                "height": self.height,
                 "x": self.x,
                 "y": self.y
                 }
