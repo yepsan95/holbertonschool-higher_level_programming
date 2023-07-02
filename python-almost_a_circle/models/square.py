@@ -48,7 +48,10 @@ class Square(Rectangle):
         """
         if args and len(args) != 0:
             try:
-                self.id = args[0]
+                if args[0] is None:
+                    self.__init__(self.size, self.x, self.y)
+                else:
+                    self.id = args[0]
             except IndexError:
                 return
             try:
@@ -66,7 +69,10 @@ class Square(Rectangle):
 
         elif kwargs and len(kwargs) != 0:
             try:
-                self.id = kwargs['id']
+                if kwargs['id'] is None:
+                    self.__init__(self.size, self.x, self.y)
+                else:
+                    self.id = kwargs['id']
             except KeyError:
                 pass
             try:
