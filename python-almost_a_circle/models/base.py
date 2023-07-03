@@ -114,7 +114,7 @@ class Base:
             with open(filename, "r", encoding="utf-8") as json_file:
                 json_string = json_file.read()
 
-            list_of instances = cls.from_json_string(json_string)
+            list_of_instances = cls.from_json_string(json_string)
             for instance in list_of_instances:
                 result.append(cls.create(**instance))
 
