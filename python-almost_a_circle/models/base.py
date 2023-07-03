@@ -3,6 +3,7 @@
 This module defines the class 'Base'.
 """
 import json
+import os
 
 
 class Base:
@@ -105,9 +106,15 @@ class Base:
         """
 
         filename = cls.__name__ + ".json"
-        try:
-            with open(filename, "r") as json_file:
-                list_dicts = Base.from_json_string(json_file.read())
-                return [cls.create(**d) for d in list_dicts]
-        except IOError:
-            return []
+        json_string = ""
+        result = []
+
+        if os.path.exists("./{:s}".format(filename)):
+            with open(filename, "r", encoding="utf-8") as json_file:
+                json_string = json_file.read()
+
+            list_of instances = cls.from_json_string(json_string)
+            for instance in list_of_instances:
+                result.append(cls.create(**instance))
+
+        return result
