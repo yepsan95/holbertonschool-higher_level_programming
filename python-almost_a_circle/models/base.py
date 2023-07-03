@@ -102,7 +102,8 @@ class Base:
         Returns a list of instances from a JSON file.
 
         Returns:
-            A list of instances.
+            If the JSON file doesn't exist - An empty list.
+            Otherwise - A list of instances.
         """
 
         filename = cls.__name__ + ".json"
